@@ -283,5 +283,44 @@ https://templatemo.com/tm-616-split-index
 </footer>
 <script src="templatemo-split-index.js"></script>
 
+
+  <script>
+
+const username =
+localStorage.getItem("username");
+
+if(username){
+
+document.querySelector(
+".site-header-nav"
+).innerHTML += `
+
+<span style="
+margin-left:20px;
+color:white;
+">
+Hi, ${username}
+</span>
+
+<a href="#"
+onclick="logout()">
+Logout
+</a>
+
+`;
+
+}
+
+function logout(){
+
+localStorage.clear();
+
+alert("Logout berhasil!");
+
+location.reload();
+
+}
+
+</script>
 </body>
 </html>
