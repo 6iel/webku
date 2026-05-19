@@ -289,21 +289,46 @@ https://templatemo.com/tm-616-split-index
 const username =
 localStorage.getItem("username");
 
-if(username){
-
+const nav =
 document.querySelector(
 ".site-header-nav"
-).innerHTML += `
+);
+
+if(username){
+
+nav.innerHTML = `
+
+<a data-nav="work"
+class="nav-active">
+Work
+</a>
+
+<a data-nav="about">
+About
+</a>
+
+<a data-nav="contact">
+Contact
+</a>
 
 <span style="
 margin-left:20px;
-color:white;
+color:black;
+font-weight:bold;
+background:white;
+padding:8px 14px;
+border-radius:20px;
 ">
 Hi, ${username}
 </span>
 
 <a href="#"
-onclick="logout()">
+onclick="logout()"
+style="
+border:1px solid white;
+padding:8px 16px;
+border-radius:20px;
+">
 Logout
 </a>
 
@@ -320,6 +345,7 @@ alert("Logout berhasil!");
 location.reload();
 
 }
+
 
 </script>
 </body>
