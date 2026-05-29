@@ -31,8 +31,23 @@ document.getElementById("username").value;
 const password =
 document.getElementById("password").value;
 
-if(username === "heri" &&
-   password === "123"){
+const savedUser =
+JSON.parse(
+localStorage.getItem("user")
+);
+
+if(
+
+(username === "heri" &&
+password === "123")
+
+||
+
+(savedUser &&
+username === savedUser.username &&
+password === savedUser.password)
+
+){
 
 localStorage.setItem(
 "username",
