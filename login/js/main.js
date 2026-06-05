@@ -21,7 +21,7 @@ inputs.forEach(input => {
 
 document
 .getElementById("loginForm")
-.addEventListener("submit", function(e){
+?.addEventListener("submit", function(e){
 
 e.preventDefault();
 
