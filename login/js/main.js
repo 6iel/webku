@@ -95,6 +95,6 @@ password
 alert("Register berhasil!");
 
 window.location.href =
-"index.html";
+"../index.html";
 
 });
