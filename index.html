@@ -29,7 +29,7 @@ https://templatemo.com/tm-616-split-index
     <a data-nav="work" class="nav-active">Proyek</a>
     <a data-nav="about">Tentang</a>
     <a data-nav="contact">Kontak</a>
-    <a href="login/index.html">Login</a>
+    <a id="loginBtn" href="login/index.html">Login</a>
   </nav>
 </header>
 
@@ -296,7 +296,15 @@ document.querySelector(
 
 if(username){
 
-const userMenu = document.createElement("span");
+const loginBtn =
+document.getElementById("loginBtn");
+
+if(loginBtn){
+loginBtn.style.display = "none";
+}
+
+const userMenu =
+document.createElement("span");
 
 userMenu.innerHTML = `
 
@@ -328,6 +336,7 @@ Logout
 nav.appendChild(userMenu);
 
 }
+
 
 function logout(){
 
