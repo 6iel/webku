@@ -284,8 +284,7 @@ https://templatemo.com/tm-616-split-index
 </footer>
 <script src="templatemo-split-index.js"></script>
 
-
-  <script>
+<script>
 
 const username =
 localStorage.getItem("username");
@@ -297,20 +296,9 @@ document.querySelector(
 
 if(username){
 
-nav.innerHTML = `
+const userMenu = document.createElement("span");
 
-<a data-nav="work"
-class="nav-active">
-Work
-</a>
-
-<a data-nav="about">
-About
-</a>
-
-<a data-nav="contact">
-Contact
-</a>
+userMenu.innerHTML = `
 
 <span style="
 margin-left:20px;
@@ -326,20 +314,24 @@ Hi, ${username}
 <a href="#"
 onclick="logout()"
 style="
+margin-left:10px;
 border:1px solid white;
 padding:8px 16px;
 border-radius:20px;
+text-decoration:none;
 ">
 Logout
 </a>
 
 `;
 
+nav.appendChild(userMenu);
+
 }
 
 function logout(){
 
-localStorage.clear();
+localStorage.removeItem("username");
 
 alert("Logout berhasil!");
 
@@ -347,7 +339,7 @@ location.reload();
 
 }
 
-
 </script>
+  
 </body>
 </html>
