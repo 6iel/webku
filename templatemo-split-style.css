@@ -240,6 +240,7 @@ body::before {
 		transform var(--transition-panel);
 	pointer-events: none;
 	overflow-y: auto;
+	scroll-behavior: smooth;
 }
 
 .panel.panel-active {
