@@ -232,8 +232,8 @@ body::before {
 	inset: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	padding: 1rem 0;
+	justify-content: flex-start;
+	padding: 4rem 0 1rem;
 	opacity: 0;
 	transform: translateY(20px);
 	transition: opacity var(--transition-panel),
@@ -457,7 +457,7 @@ body::before {
 
 /* ── Panel: Contact ── */
 .contact-content {
-	padding: 2rem 3rem;
+	padding: 4rem 3rem 2rem;
 }
 
 .contact-label {
